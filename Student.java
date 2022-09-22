@@ -1,30 +1,35 @@
-package studentinfo;
+package org.student;
+import org.dept.Dept;
 
-public class Student {
-	//Class: Students
-	  //    Methods: getStudentInfo()
-
-	//Description: 
-	//Create multiple getStudentInfo() method by passing id argument alone, by id & name, by email & phoneNumber
-public void getStudentInfo(int Id) {
-	
-	System.out.println("my Id "+ Id );
-}
-	public void getStudentInfo(int Id,String Name) {
-		System.out.println("my ID is  "+ Id+" Name "+Name);
+public abstract class Student extends Dept  {
+	public void StudentName() {
 	}
-	public void getStudentInfo(String email, long phNo) {
-	
-	 System.out.println("My email id is "+email+" My phone number is "+phNo);
-		
-}
+	abstract void StudentDept();
+	void StudentId() {
+	}
+
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Student obj =new Student();
-		obj.getStudentInfo(123321);
-		obj.getStudentInfo(326541,"Ibrahim");
-		obj.getStudentInfo("ibrahim@1gmail.com", 1234567890);
+		Student obj = new Student() {
 
+			@Override
+			void StudentDept() {
+				// TODO Auto-generated method stub
+				
+			}
+			
+
+				
+			
+		};
+		obj.StudentDept();
+		obj.DeptName();
+		obj.CollegeCode();
+		obj.CollegeName();
+		obj.StudentId();
+		obj.StudentName();
+		
 	}
 
 }
